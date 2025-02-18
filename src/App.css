@@ -2,7 +2,7 @@
  * @Author: Carlos Galeano
  * @Date:   2025-02-17 12:33:45
  * @Last Modified by:   Carlos Galeano
- * @Last Modified time: 2025-02-17 16:11:21
+ * @Last Modified time: 2025-02-17 17:32:12
  */
 #root {
   max-width: 1280px;
@@ -50,4 +50,26 @@
 
 .hidden{
     display:none;
+}
+
+.hidden {
+  display: none;
+}
+
+.square {
+  background-color: #eee; /* Color de fondo */
+  border: 1px solid #ddd; /* Borde */
+  font-size: 14px; /* Tamaño de la fuente */
+  padding: 10px; /* Espacio interno (arriba, abajo, izquierda, derecha) */
+  width: 50px; /* Ancho fijo */
+  height: 50px; /* Alto fijo */
+  text-align: center; /* Centrar el texto horizontalmente */
+  vertical-align: middle; /* Centrar el texto verticalmente */
+  cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+  box-sizing: border-box; /* Incluir el padding y el borde en el ancho y alto */
+  color: black;
+}
+
+.square:focus {
+  outline: none; /* Evita el contorno predeterminado al hacer clic */
 }

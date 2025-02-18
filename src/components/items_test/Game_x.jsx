@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Row,Col } from "react-bootstrap";
 
 const Game_x = () => {
   const [squeares, setSquares] = useState(Array(9).fill(null));
@@ -84,21 +85,31 @@ const Game_x = () => {
       </h1>
 
       <h1 className={!hidden ? "hidden" : ""}>Turno de {letra}</h1>
-      <div className="board-row">
+      <Row>
+        <Col>
         <Square value={squeares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squeares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squeares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
+        
+        </Col>
+        
+      </Row>
+      <Row>
+      <Col>
         <Square value={squeares[3]} onSquareClick={() => handleClick(3)} />
         <Square value={squeares[4]} onSquareClick={() => handleClick(4)} />
         <Square value={squeares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="board-row">
+        </Col>
+        
+        </Row>
+        <Row>
+        <Col>
         <Square value={squeares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squeares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squeares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
+        </Col>
+        
+        </Row>
     </>
   );
 };
