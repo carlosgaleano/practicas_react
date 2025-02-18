@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import Contador from './components/items_test/Contador';
-import Game_x from './components/items_test/Game_x';
+import Game from './components/items_test/Game_x';
 
 function App() {
   
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
   <Contador/>
-  <Game_x/>
+  <Game/>
     </>
   )
 }

@@ -51,3 +51,85 @@
 .hidden{
     display:none;
 }
+/* Estilos básicos */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #333;
+  margin: 20px auto;
+  background-color: #f8f8f8; /* Color de fondo del tablero */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para el tablero */
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+}
+
+.square {
+
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: #fff; /* Color de fondo de los cuadrados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  color:black;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+}
+
+.square:active {
+  background-color: #e0e0e0;
+  transform: scale(0.95); /* Escala ligeramente al hacer clic */
+}
+
+/* Estilos para X y O */
+.square.x {
+  color: #007bff; /* Azul para X */
+}
+
+.square.o {
+  color: #dc3545; /* Rojo para O */
+}
+
+/* Estilo para la línea ganadora */
+.winner-line .square {
+  background-color: #c8e6c9; /* Verde claro para la línea ganadora */
+}
+
+/* Diseño responsivo */
+@media (max-width: 500px) {
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 80px;
+  }
+}
+
+/* Estilos adicionales (opcional) */
+.square {
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para el estado del juego */
+#game-status {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+}
