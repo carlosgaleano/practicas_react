@@ -12,9 +12,10 @@ const Board = ({ xIsNext, squares, onPlay}) => {
   useEffect(() => {
     const response = calculateWinner(squares);
     if (response) {
-      console.log("Ganador_w:", winner);
+      
       setHidden(false);
       setWinner(true);
+      console.log("Ganador_w:", response);
     }
   }, [squares]);
 
